@@ -1,7 +1,7 @@
-﻿namespace MusicPlayerMethod
+﻿namespace MusicPLayerStrategy
 {
     public interface IEqualizer
     {
-        void SetEqualizer(Song song);
+        SoundOutput SetEqualizer(IMedia song);
     }
 }

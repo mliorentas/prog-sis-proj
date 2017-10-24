@@ -1,7 +1,7 @@
-﻿namespace MusicPlayerMethod
+﻿namespace MusicPLayerStrategy
 {
     public interface ITitleFormater
     {
-        void FormatTitle(Song song);
+        string FormatTitle(Song song);
     }
 }

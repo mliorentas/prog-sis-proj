@@ -1,11 +1,12 @@
-﻿namespace MusicPlayerMethod
+﻿namespace MusicPLayerStrategy
 {
     public class SoundOutput
     {
-        int _lows = 0;
-        int _mids = 0;
-        int _highs = 0;
+        public float Lows { get; set; }
+        public float Mids { get; set; }
+        public float Highs { get; set; }
 
-        int _balance = 0;
+        public float Balance { get; set; }
+
     }
 }
