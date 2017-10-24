@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMusicPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Song.cs" />
+    <Compile Include="SoundOutput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

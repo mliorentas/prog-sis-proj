@@ -8,9 +8,18 @@ namespace MusicPlayerMethod
 {
     class IMusicPlayer
     {
+        private IEqualizer _eq;
+        private ITitleFormater _formater;
+
+
+        public IMusicPlayer(IEqualizer eq, ITitleFormater formater)
+        {
+            _eq = eq;
+            _formater = formater;
+        }
         public SoundOutput PlaySong(Song song)
         {
-            SetEqualizer(song);
+            _eq.SetEqualizer(song);
             Normalize(song);
             Balance(song);
             return new SoundOutput();
@@ -35,7 +44,7 @@ namespace MusicPlayerMethod
         {
             foreach(var song in songs)
             {
-                FormatTitle(song);
+                _formater.FormatTitle(song);
                 FormatDescription(song);
                 FormatRating(song);
             }

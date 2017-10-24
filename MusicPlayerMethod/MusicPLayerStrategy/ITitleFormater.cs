@@ -2,5 +2,6 @@
 {
     public interface ITitleFormater
     {
+        void FormatTitle(Song song);
     }
 }
