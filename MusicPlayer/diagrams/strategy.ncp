@@ -1,0 +1,503 @@
+<Project>
+  <Name>Untitled</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>MusicPlayerMethod</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>AbstractMoviePlayer</Name>
+        <Access>Public</Access>
+        <Location left="1241" top="623" />
+        <Size width="346" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static MoviePlayer MoviePlayer(IEqualizer eq)</Member>
+        <Member type="Method">public SoundOutput PlayMovie(Movie movie)</Member>
+        <Member type="Method">protected abstract SoundOutput SetEqualizer(Movie movie)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IMedia</Name>
+        <Access>Public</Access>
+        <Location left="769" top="771" />
+        <Size width="204" height="106" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">float Compression { get; }</Member>
+        <Member type="Property">string Title { get; }</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>AbstractMusicPlayer</Name>
+        <Access>Public</Access>
+        <Location left="125" top="654" />
+        <Size width="401" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public new static MusicPlayer MusicPlayer(IEqualizer eq, ITitleFormatter formatter)</Member>
+        <Member type="Method">protected abstract SoundOutput SetEqualizer(Song song)</Member>
+        <Member type="Method">protected abstract string FormatTitle(Song song)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SoundOutput</Name>
+        <Access>Public</Access>
+        <Location left="769" top="577" />
+        <Size width="206" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public float Balance { get; }</Member>
+        <Member type="Property">public float Highs { get; }</Member>
+        <Member type="Property">public float Mids { get; }</Member>
+        <Member type="Property">public float Lows { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Movie</Name>
+        <Access>Public</Access>
+        <Location left="955" top="1012" />
+        <Size width="185" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public float Compression { get; }</Member>
+        <Member type="Property">public string Title { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Song</Name>
+        <Access>Public</Access>
+        <Location left="392" top="978" />
+        <Size width="414" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static Song Song(string title, string artist, string album, float compression)</Member>
+        <Member type="Property">public string Artist { get; }</Member>
+        <Member type="Property">public string Title { get; }</Member>
+        <Member type="Property">public string Album { get; }</Member>
+        <Member type="Property">public float Compression { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NormalLeftSimpleTitleMusicPlayer</Name>
+        <Access>Public</Access>
+        <Location left="72" top="132" />
+        <Size width="390" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static NormalLeftSimpleTitleMusicPlayer NormalLeftSimpleTitleMusicPlayer(IEqualizer eq, ITitleFormatter formatter)</Member>
+        <Member type="Method">protected SoundOutput SetEqualizer(Song song)</Member>
+        <Member type="Method">protected string FormatTitle(Song song)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NormalLeftAdvancedTitleMusicPlayer</Name>
+        <Access>Public</Access>
+        <Location left="519" top="132" />
+        <Size width="390" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static NormalLeftAdvancedTitleMusicPlayer NormalLeftAdvancedTitleMusicPlayer(IEqualizer eq, ITitleFormatter formatter)</Member>
+        <Member type="Method">protected SoundOutput SetEqualizer(Song song)</Member>
+        <Member type="Method">protected string FormatTitle(Song song)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BassTrebleAdvancedTitleMusicPlayer</Name>
+        <Access>Public</Access>
+        <Location left="687" top="336" />
+        <Size width="581" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static BassTrebleAdvancedTitleMusicPlayer BassTrebleAdvancedTitleMusicPlayer(IEqualizer eq, ITitleFormatter formatter)</Member>
+        <Member type="Method">protected SoundOutput SetEqualizer(Song song)</Member>
+        <Member type="Method">protected string FormatTitle(Song song)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BassTrebleSimpleTitleMusicPlayer</Name>
+        <Access>Public</Access>
+        <Location left="72" top="336" />
+        <Size width="518" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static BassTrebleSimpleTitleMusicPlayer BassTrebleSimpleTitleMusicPlayer(IEqualizer eq, ITitleFormatter formatter)</Member>
+        <Member type="Method">protected SoundOutput SetEqualizer(Song song)</Member>
+        <Member type="Method">protected string FormatTitle(Song song)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NormalLeftMoviePlayer</Name>
+        <Access>Public</Access>
+        <Location left="1036" top="101" />
+        <Size width="390" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static NormalLeftMoviePlayer NormalLeftMoviePlayer(IEqualizer eq)</Member>
+        <Member type="Method">protected SoundOutput SetEqualizer(Movie movie)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BassTrebleMoviePlayer</Name>
+        <Access>Public</Access>
+        <Location left="1358" top="323" />
+        <Size width="390" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static BassTrebleMoviePlayer BassTrebleMoviePlayer(IEqualizer eq)</Member>
+        <Member type="Method">protected SoundOutput SetEqualizer(Movie movie)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Realization" first="4" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="2" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>362</X>
+          <Y>830</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>557</X>
+          <Y>952</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1477</X>
+          <Y>799</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1105</X>
+          <Y>987</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="9" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>324</X>
+          <Y>512</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>324</X>
+          <Y>616</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>362</X>
+          <Y>594</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>673</X>
+          <Y>509</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>407</X>
+          <Y>628</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>648</X>
+          <Y>317</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>458</X>
+          <Y>582</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="10" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="11" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>MusicPlayerStrategy</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>MusicPlayer</Name>
+        <Access>Public</Access>
+        <Location left="228" top="10" />
+        <Size width="401" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private IEqualizer _eq</Member>
+        <Member type="Field">ITitleFormatter _formatter</Member>
+        <Member type="Method">public static MusicPlayer MusicPlayer(IEqualizer eq, ITitleFormatter formatter)</Member>
+        <Member type="Method">public SoundOutput PlaySong(Song song)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Song</Name>
+        <Access>Public</Access>
+        <Location left="474" top="653" />
+        <Size width="414" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static Song Song(string title, string artist, string album, float compression)</Member>
+        <Member type="Property">public string Artist { get; }</Member>
+        <Member type="Property">public string Title { get; }</Member>
+        <Member type="Property">public string Album { get; }</Member>
+        <Member type="Property">public float Compression { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IMedia</Name>
+        <Access>Public</Access>
+        <Location left="725" top="450" />
+        <Size width="204" height="106" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">float Compression { get; }</Member>
+        <Member type="Property">string Title { get; }</Member>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IEqualizer</Name>
+        <Access>Public</Access>
+        <Location left="1226" top="393" />
+        <Size width="208" height="81" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">MediaOutput SetEqualizer(IMedia media)</Member>
+      </Entity>
+      <Entity type="Interface">
+        <Name>ITitleFormatter</Name>
+        <Access>Public</Access>
+        <Location left="94" top="265" />
+        <Size width="228" height="88" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">string FormatTitle(IMedia media)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>Movie</Name>
+        <Access>Public</Access>
+        <Location left="956" top="712" />
+        <Size width="185" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public float Compression { get; }</Member>
+        <Member type="Property">public string Title { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SoundOutput</Name>
+        <Access>Public</Access>
+        <Location left="1323" top="712" />
+        <Size width="206" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public float Balance { get; }</Member>
+        <Member type="Property">public float Highs { get; }</Member>
+        <Member type="Property">public float Mids { get; }</Member>
+        <Member type="Property">public float Lows { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NormalLeftEqualizer</Name>
+        <Access>Public</Access>
+        <Location left="1120" top="561" />
+        <Size width="262" height="105" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public SoundOuput SetEqualizer(IMedia media)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BassTrebleEqualizer</Name>
+        <Access>Public</Access>
+        <Location left="1407" top="561" />
+        <Size width="262" height="105" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public SoundOuput SetEqualizer(IMedia media)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SimpleFormatter</Name>
+        <Access>Public</Access>
+        <Location left="10" top="479" />
+        <Size width="261" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">string FormatTitle(IMedia media)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AdvancedTitleFormatter</Name>
+        <Access>Public</Access>
+        <Location left="311" top="479" />
+        <Size width="261" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">string FormatTitle(IMedia media)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MoviePlayer</Name>
+        <Access>Public</Access>
+        <Location left="817" top="10" />
+        <Size width="346" height="151" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private IEqualizer _eq</Member>
+        <Member type="Method">public static MoviePlayer MoviePlayer(IEqualizer eq)</Member>
+        <Member type="Method">public SoundOutput PlaySong(Song song)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Realization" first="1" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="5" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="7" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="8" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="9" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="10" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="0" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>208</X>
+          <Y>240</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="11" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>605</X>
+          <Y>217</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1302</X>
+          <Y>368</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>475</X>
+          <Y>191</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>625</X>
+          <Y>626</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="11" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1069</X>
+          <Y>186</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>371</X>
+          <Y>314</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1270</X>
+          <Y>360</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>864</X>
+          <Y>410</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="7" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="8" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

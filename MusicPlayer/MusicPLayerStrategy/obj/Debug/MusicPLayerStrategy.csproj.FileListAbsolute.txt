@@ -1,0 +1,12 @@
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayerMethod\MusicPLayerStrategy\bin\Debug\MusicPLayerStrategy.exe.config
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayerMethod\MusicPLayerStrategy\bin\Debug\MusicPLayerStrategy.exe
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayerMethod\MusicPLayerStrategy\bin\Debug\MusicPLayerStrategy.pdb
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayerMethod\MusicPLayerStrategy\obj\Debug\MusicPLayerStrategy.csprojResolveAssemblyReference.cache
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayerMethod\MusicPLayerStrategy\obj\Debug\MusicPLayerStrategy.exe
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayerMethod\MusicPLayerStrategy\obj\Debug\MusicPLayerStrategy.pdb
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPLayerStrategy\bin\Debug\MusicPLayerStrategy.exe.config
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPLayerStrategy\bin\Debug\MusicPLayerStrategy.exe
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPLayerStrategy\bin\Debug\MusicPLayerStrategy.pdb
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPLayerStrategy\obj\Debug\MusicPLayerStrategy.csprojResolveAssemblyReference.cache
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPLayerStrategy\obj\Debug\MusicPLayerStrategy.exe
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPLayerStrategy\obj\Debug\MusicPLayerStrategy.pdb

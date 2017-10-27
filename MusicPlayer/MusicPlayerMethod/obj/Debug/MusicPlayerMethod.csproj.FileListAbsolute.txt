@@ -1,0 +1,6 @@
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPlayerMethod\bin\Debug\MusicPlayerMethod.exe.config
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPlayerMethod\obj\Debug\MusicPlayerMethod.csprojResolveAssemblyReference.cache
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPlayerMethod\bin\Debug\MusicPlayerMethod.exe
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPlayerMethod\bin\Debug\MusicPlayerMethod.pdb
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPlayerMethod\obj\Debug\MusicPlayerMethod.exe
+C:\Users\Matas\Desktop\5 Semestras\prog-sis-proj\MusicPlayer\MusicPlayerMethod\obj\Debug\MusicPlayerMethod.pdb
