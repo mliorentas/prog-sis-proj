@@ -9,7 +9,9 @@ namespace DigitalAudioWorkstation.Domain
 {
     interface ITrackService
     {
-        ITrack AddTrack();
-        ITrackFactory ExtendTrack(ITrack track);
+        ITrack CreateTrack();
+        ITrack SetMute(ITrack track, bool muted);
+        IClip CreateClip();
+        IClip Duplicate(IClip track);
     }
 }

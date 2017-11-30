@@ -25,7 +25,9 @@ namespace DigitalAudioWorkstation
 
             //builder.RegisterType<ConsoleOutput>().As<IOutput>();
             //builder.RegisterType<TodayWriter>().As<IDateWriter>();
-            builder.REgister
+            builder.RegisterType<AudioDeviceFactory>().As<IDeviceFactory>();
+            builder.RegisterType<AudioEffectsFactory>().As<IEffectFactory>();
+            builder.RegisterType<AudioTrackFactory>().As<ITrackFactory>();
             Container = builder.Build(); 
 
         }

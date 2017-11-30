@@ -49,18 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Factories\MidiDevicesFactory.cs" />
-    <Compile Include="Domain\Factories\AudioDeviceFactory.cs" />
-    <Compile Include="Domain\Factories\AudioEffectsFactory.cs" />
-    <Compile Include="Domain\Factories\MidiInstrumentFactory.cs" />
+    <Compile Include="Domain\Services\AudioServices\AudioTrackService.cs" />
+    <Compile Include="Domain\Factories\Midi\MidiDevicesFactory.cs" />
+    <Compile Include="Domain\Factories\Audio\AudioDeviceFactory.cs" />
+    <Compile Include="Domain\Factories\Audio\AudioEffectsFactory.cs" />
+    <Compile Include="Domain\Factories\Midi\MidiInstrumentFactory.cs" />
     <Compile Include="Domain\Factories\IEffectFactory.cs" />
     <Compile Include="Domain\Factories\IDeviceFactory.cs" />
-    <Compile Include="Domain\Factories\MidiTrackFactory.cs" />
-    <Compile Include="Domain\Factories\AudioTrackFactory.cs" />
+    <Compile Include="Domain\Factories\Midi\MidiTrackFactory.cs" />
+    <Compile Include="Domain\Factories\Audio\AudioTrackFactory.cs" />
     <Compile Include="Domain\Factories\ITrackFactory.cs" />
-    <Compile Include="Domain\IDeviceService.cs" />
-    <Compile Include="Domain\IEffectService.cs" />
-    <Compile Include="Domain\ITrackService.cs" />
+    <Compile Include="Domain\Services\IDeviceService.cs" />
+    <Compile Include="Domain\Services\IEffectService.cs" />
+    <Compile Include="Domain\Services\ITrackService.cs" />
     <Compile Include="Entities\Audio\Sampler.cs" />
     <Compile Include="Entities\Midi\Reverb.cs" />
     <Compile Include="Entities\IEffect.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Entities\Midi\Drums.cs" />
     <Compile Include="Entities\Midi\MidiOutput.cs" />
     <Compile Include="Entities\Midi\MidiTrack.cs" />
+    <Compile Include="Facade\ITrackFacade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\ITrack.cs" />
@@ -100,9 +102,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\AudioServices\" />
-    <Folder Include="Domain\MidiServices\" />
-    <Folder Include="Facade\" />
+    <Folder Include="Domain\Services\MidiServices\" />
     <Folder Include="Integration\" />
     <Folder Include="UI\" />
   </ItemGroup>

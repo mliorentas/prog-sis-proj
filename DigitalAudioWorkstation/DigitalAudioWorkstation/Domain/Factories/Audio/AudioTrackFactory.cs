@@ -11,11 +11,11 @@ namespace DigitalAudioWorkstation
 {
     class AudioTrackFactory
     {
-        ITrack CreateTrack()
+        public ITrack CreateTrack()
         {
             return new AudioTrack();
         }
-        IClip CreateClip()
+        public IClip CreateClip()
         {
             return new AudioClip();
         }
