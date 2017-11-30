@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Repository
 {
     interface IInstrumentStore
     {
-        bool AddInstrument(IInstrument instrument);
+        IInstrument AddInstrument(IInstrument instrument);
         IInstrument GetInstrument(string id);
     }
 }

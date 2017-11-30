@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities
 {
     interface ITrack
     {
+        string Id { get; set; }
     }
 }

@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities
 {
     interface IEffect
     {
+        string Id { get; set; }
     }
 }

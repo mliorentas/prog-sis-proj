@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities
 {
     interface IInstrument
     {
+        string Id { get; set; }
     }
 }

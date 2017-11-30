@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities
 {
     interface IClip
     {
+        string Id { get; set; }
     }
 }
