@@ -58,6 +58,9 @@
     <Compile Include="Domain\Factories\MidiTrackFactory.cs" />
     <Compile Include="Domain\Factories\AudioTrackFactory.cs" />
     <Compile Include="Domain\Factories\ITrackFactory.cs" />
+    <Compile Include="Domain\IDeviceService.cs" />
+    <Compile Include="Domain\IEffectService.cs" />
+    <Compile Include="Domain\ITrackService.cs" />
     <Compile Include="Entities\Audio\Sampler.cs" />
     <Compile Include="Entities\Midi\Reverb.cs" />
     <Compile Include="Entities\IEffect.cs" />
@@ -78,6 +81,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\ITrack.cs" />
+    <Compile Include="Repository\EffectStore.cs" />
+    <Compile Include="Repository\TrackStore.cs" />
+    <Compile Include="Repository\InstrumentStore.cs" />
+    <Compile Include="Repository\OutputStore.cs" />
+    <Compile Include="Repository\InputStore.cs" />
+    <Compile Include="Repository\ClipStore.cs" />
     <Compile Include="TrackType.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,9 +94,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Domain\AudioServices\" />
+    <Folder Include="Domain\MidiServices\" />
     <Folder Include="Facade\" />
     <Folder Include="Integration\" />
-    <Folder Include="Repository\" />
     <Folder Include="UI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
