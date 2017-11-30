@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DigitalAudioWorkstation.Entities
 {
-    interface IAudioEffect : IChainElement
+    interface IInstrument
     {
     }
 }

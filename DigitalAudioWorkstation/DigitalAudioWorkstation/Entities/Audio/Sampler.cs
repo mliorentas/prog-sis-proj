@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation.Entities
+namespace DigitalAudioWorkstation.Entities.Audio
 {
-    interface IMidiInstrument : IChainElement
+    class Sampler : IInstrument
     {
     }
 }

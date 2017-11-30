@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation.Entities.Audio
+namespace DigitalAudioWorkstation.Entities.Midi
 {
-    class EQ : IEffect
+    class Reverb : IEffect
     {
     }
 }

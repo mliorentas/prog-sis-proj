@@ -8,7 +8,7 @@ using DigitalAudioWorkstation.Entities.Midi;
 
 namespace DigitalAudioWorkstation
 {
-    class IMidiDevicesFactory
+    class MidiDevicesFactory
     {
         IInput CreateInput()
         {

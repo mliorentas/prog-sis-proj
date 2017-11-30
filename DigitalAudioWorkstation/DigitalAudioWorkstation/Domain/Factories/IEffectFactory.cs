@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation
 {
     interface IEffectFactory
     {
-        IAudioEffect CreateEffect();
-        IAudioEffect CreateMutedEffect();
+        IEffect CreateEffect();
+        IInstrument CreateInstrument();
     }
 }

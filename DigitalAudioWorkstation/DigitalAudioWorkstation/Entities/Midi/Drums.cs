@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DigitalAudioWorkstation.Entities.Midi
 {
-    class Drums : IChainElement
+    class Drums : IInstrument
     {
     }
 }
