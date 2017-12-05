@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Services.MidiServices
 {
-    enum TrackType
+    class MidiTrackService
     {
-        Audio,
-        Midi
     }
 }

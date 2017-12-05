@@ -11,6 +11,7 @@ namespace DigitalAudioWorkstation.Domain
     {
         ITrack CreateTrack();
         ITrack SetMute(ITrack track, bool muted);
+        ITrack InsertClip(ITrack track, double time);
         IClip CreateClip();
         IClip Duplicate(IClip track);
     }

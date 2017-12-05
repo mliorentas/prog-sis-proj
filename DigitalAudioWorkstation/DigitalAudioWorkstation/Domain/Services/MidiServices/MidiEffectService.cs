@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation.Facade
+namespace DigitalAudioWorkstation.Domain.Services.MidiServices
 {
-    interface ITrackFacade
+    class MidiTrackService
     {
-
-
     }
 }

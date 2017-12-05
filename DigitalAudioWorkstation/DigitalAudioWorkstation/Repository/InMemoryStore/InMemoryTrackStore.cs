@@ -7,7 +7,7 @@ using DigitalAudioWorkstation.Entities;
 
 namespace DigitalAudioWorkstation.Repository
 {
-    class InMemoryTractStore : ITrackStore
+    class InMemoryTrackStore : ITrackStore
     {
         private List<ITrack> m_tracks = new List<ITrack>();
 

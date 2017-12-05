@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using System;
+using DigitalAudioWorkstation.Repository;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +28,14 @@ namespace DigitalAudioWorkstation
             builder.RegisterType<AudioDeviceFactory>().As<IDeviceFactory>();
             builder.RegisterType<AudioEffectsFactory>().As<IEffectFactory>();
             builder.RegisterType<AudioTrackFactory>().As<ITrackFactory>();
+
+            builder.RegisterType<InMemoryClipStore>().As<IClipStore>();
+            builder.RegisterType<InMemoryEffectStore>().As<IEffectStore>();
+            builder.RegisterType<InMemoryInputStore>().As<IInputStore>();
+            builder.RegisterType<InMemoryInstrumentStore>().As<IInstrumentStore>();
+            builder.RegisterType<InMemoryOutputStore>().As<IOutputStore>();
+            builder.RegisterType<InMemoryTrackStore>().As<ITrackStore>();
+
             Container = builder.Build(); 
 
         }
