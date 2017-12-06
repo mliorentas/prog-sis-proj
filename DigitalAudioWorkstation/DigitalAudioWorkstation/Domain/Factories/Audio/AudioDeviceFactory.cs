@@ -6,16 +6,16 @@ using System.Text;
 using DigitalAudioWorkstation.Entities;
 using DigitalAudioWorkstation.Entities.Audio;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Factories.Audio
 {
-    class AudioDeviceFactory
+    class AudioDeviceFactory : IDeviceFactory
     {
-        IInput CreateInput()
+        public IInput CreateInput()
         {
             return new Microphone();
         }
 
-        IOutput CreateOutput()
+        public IOutput CreateOutput()
         {
             return new Speakers();
         }

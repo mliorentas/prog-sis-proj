@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using DigitalAudioWorkstation.Entities;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Factories
 {
     interface IDeviceFactory
     {

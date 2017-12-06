@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities.Audio
 {
     class AudioClip : IClip
     {
+        public string Id { get; set; }
     }
 }

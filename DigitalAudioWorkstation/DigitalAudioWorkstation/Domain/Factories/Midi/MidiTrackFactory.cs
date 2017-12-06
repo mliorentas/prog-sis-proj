@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Factories.Midi
 {
-    class MidiTrackFactory
+    class MidiTrackFactory : ITrackFactory
     {
-        ITrack CreateTrack()
+        public ITrack CreateTrack()
         {
             return new MidiTrack();
         }
-        IClip CreateClip()
+        public IClip CreateClip()
         {
             return new MidiClip();
         }

@@ -5,14 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation.Domain
+namespace DigitalAudioWorkstation.Domain.Services
 {
     interface ITrackService
     {
-        ITrack CreateTrack();
-        ITrack SetMute(ITrack track, bool muted);
-        ITrack InsertClip(ITrack track, double time);
-        IClip CreateClip();
-        IClip Duplicate(IClip track);
+        ITrack CreateTrack(string id);
+        ITrack InsertClip(ITrack track, IClip clip);
+        IClip CreateClip(string id);
+        ITrack GetTrack(string id);
     }
 }

@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities.Audio
 {
     class Speakers : IOutput
     {
+        public string Id { get; set; }
     }
 }

@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Factories.Audio
 {
-    class AudioEffectsFactory
+    class AudioEffectsFactory : IEffectFactory
     {
-        IEffect CreateEffect()
+        public IEffect CreateEffect()
         {
             return new EQ();
         }
-        IInstrument CreateInstrument()
+        public IInstrument CreateInstrument()
         {
             return new Sampler();
         }

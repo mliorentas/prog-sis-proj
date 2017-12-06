@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Factories.Audio
 {
-    class AudioTrackFactory
+    class AudioTrackFactory : ITrackFactory
     {
         public ITrack CreateTrack()
         {

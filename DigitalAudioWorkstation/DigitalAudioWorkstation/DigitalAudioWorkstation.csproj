@@ -112,7 +112,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Integration\" />
-    <Folder Include="UI\" />
+    <Folder Include="UI\Controllers\" />
+    <Folder Include="UI\Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

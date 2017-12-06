@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities.Midi
 {
     class Keyboard : IInput
     {
+        public string Id { get; set; }
     }
 }

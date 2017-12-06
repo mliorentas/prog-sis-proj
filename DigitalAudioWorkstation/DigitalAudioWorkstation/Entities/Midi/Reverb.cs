@@ -8,5 +8,7 @@ namespace DigitalAudioWorkstation.Entities.Midi
 {
     class Reverb : IEffect
     {
+        public string Id { get; set; }
+
     }
 }

@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Factories.Midi
 {
-    class MidiInstrumentFactory
+    class MidiInstrumentFactory : IEffectFactory
     {
-        IEffect CreateEffect()
+        public IEffect CreateEffect()
         {
             return new Reverb();
         }
-        IInstrument CreateInstrument()
+        public IInstrument CreateInstrument()
         {
             return new Drums();
         }

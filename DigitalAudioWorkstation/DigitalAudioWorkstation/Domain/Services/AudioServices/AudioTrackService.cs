@@ -1,19 +1,23 @@
-﻿using DigitalAudioWorkstation.Entities;
+﻿using DigitalAudioWorkstation.Domain.Factories;
+using DigitalAudioWorkstation.Entities;
+using DigitalAudioWorkstation.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation.Domain
+namespace DigitalAudioWorkstation.Domain.Services.AudioServices
 {
     class AudioTrackService : ITrackService
     {
         ITrackFactory m_factory;
+        ITrackStore m_store;
 
-        public AudioTrackService(ITrackFactory factory)
+        public AudioTrackService(ITrackFactory factory, ITrackStore store)
         {
             m_factory = factory;
+            m_store = store;
         }
 
         public IClip CreateClip()
@@ -26,17 +30,9 @@ namespace DigitalAudioWorkstation.Domain
             return m_factory.CreateTrack();
         }
 
-        public ITrack SetMute(ITrack track, bool muted)
+        public ITrack InsertClip(ITrack track, double time)
         {
-            track.IsMuted = muted;
-            return track;
-        }
-
-        public IClip Duplicate(IClip clip)
-        {
-            var newClip = m_factory.CreateClip();
-            newClip.Id = clip.Id;
-            return newClip;
+            throw new NotImplementedException();
         }
     }
 }

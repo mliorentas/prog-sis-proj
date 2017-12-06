@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities.Audio
 {
     class Microphone : IInput
     {
+        public string Id { get; set; }
     }
 }

@@ -8,5 +8,6 @@ namespace DigitalAudioWorkstation.Entities.Midi
 {
     class MidiClip : IClip
     {
+        public string Id { get; set; }
     }
 }

@@ -8,5 +8,9 @@ namespace DigitalAudioWorkstation.Entities.Audio
 {
     class AudioTrack : ITrack
     {
+        public string Id { get; set; }
+        public bool IsMuted { get; set; }
+        public float Pan { get; set; }
+        public float Volume { get; set; }
     }
 }

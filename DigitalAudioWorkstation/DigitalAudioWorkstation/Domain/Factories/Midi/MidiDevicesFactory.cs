@@ -6,15 +6,15 @@ using System.Text;
 using DigitalAudioWorkstation.Entities;
 using DigitalAudioWorkstation.Entities.Midi;
 
-namespace DigitalAudioWorkstation
+namespace DigitalAudioWorkstation.Domain.Factories.Midi
 {
-    class MidiDevicesFactory
+    class MidiDeviceFactory : IDeviceFactory
     {
-        IInput CreateInput()
+        public IInput CreateInput()
         {
             return new Keyboard();
         }
-        IOutput CreateOutput()
+        public IOutput CreateOutput()
         {
             return new MidiOutput();
         }
