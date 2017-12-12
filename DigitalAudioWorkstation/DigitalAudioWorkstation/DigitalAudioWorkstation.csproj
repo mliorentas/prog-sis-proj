@@ -71,7 +71,7 @@
     <Compile Include="Entities\Midi\Reverb.cs" />
     <Compile Include="Entities\IEffect.cs" />
     <Compile Include="Entities\IClip.cs" />
-    <Compile Include="Entities\IInputDevice.cs" />
+    <Compile Include="Entities\IInput.cs" />
     <Compile Include="Entities\IInstrument.cs" />
     <Compile Include="Entities\IOutput.cs" />
     <Compile Include="Entities\Audio\AudioClip.cs" />
@@ -105,6 +105,11 @@
     <Compile Include="Repository\IOutputStore.cs" />
     <Compile Include="Repository\IInputStore.cs" />
     <Compile Include="Repository\IClipStore.cs" />
+    <Compile Include="UI\Controllers\IMixerController.cs" />
+    <Compile Include="UI\Controllers\IRecordController.cs" />
+    <Compile Include="UI\Views\IMainView.cs" />
+    <Compile Include="UI\Views\IMixerView.cs" />
+    <Compile Include="UI\Views\IRecordView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -112,8 +117,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Integration\" />
-    <Folder Include="UI\Controllers\" />
-    <Folder Include="UI\Views\" />
+    <Folder Include="UI\Controllers\Default\" />
+    <Folder Include="UI\Views\Console\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,9 +9,7 @@ namespace DigitalAudioWorkstation.Facade
 {
     interface IRecordFacade
     {
-        ITrack RecordTrack();
-        ITrack PlayTrack();
-        IClip ApllyEffect(IClip clip, IEffect effect);
-
+        IClip RecordClip(string id, ITrack track, IInput input, IInstrument instrument);
+        ITrack RecordTrack(string id, IInput input, IInstrument instrument);
     }
 }

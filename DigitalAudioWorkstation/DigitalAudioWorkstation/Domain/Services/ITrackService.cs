@@ -10,8 +10,9 @@ namespace DigitalAudioWorkstation.Domain.Services
     interface ITrackService
     {
         ITrack CreateTrack(string id);
-        ITrack InsertClip(ITrack track, IClip clip);
         IClip CreateClip(string id);
+        ITrack AddClip(ITrack track, IClip clip);
         ITrack GetTrack(string id);
+        IClip GetClip(string id, ITrack track);
     }
 }

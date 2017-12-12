@@ -11,5 +11,8 @@ namespace DigitalAudioWorkstation.Domain.Services
     {
         IInstrument CreateInstrument(string id);
         IEffect CreateEffect(string id);
+        IInstrument GetInstrument(string id);
+        IEffect GetEffect(string id);
+
     }
 }

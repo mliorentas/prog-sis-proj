@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalAudioWorkstation.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace DigitalAudioWorkstation.Facade
 {
     interface IMixerFacade
     {
-
-
+        ITrack PlayTrack(ITrack track, IOutput output, IEffect effect);
+        IClip ApllyEffect(IClip clip, IEffect effect);
     }
 }

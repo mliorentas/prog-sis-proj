@@ -11,5 +11,7 @@ namespace DigitalAudioWorkstation.Domain.Services
     {
         IInput CreateInput(string id);
         IOutput CreateOutput(string id);
+        IInput GetInput(string id);
+        IOutput GetOutput(string id);
     }
 }
