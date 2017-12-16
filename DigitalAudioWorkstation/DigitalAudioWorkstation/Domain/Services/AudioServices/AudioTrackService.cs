@@ -55,10 +55,10 @@ namespace DigitalAudioWorkstation.Domain.Services.AudioServices
             track.TrackInfo = track.TrackInfo + "Effect: " + data;
         }
 
-        public void AddInstrument(string trackId, string data)
+        public void AddRecording(string clipId, string data)
         {
-            var track = m_trackStore.GetTrack(trackId);
-            track.TrackInfo = track.TrackInfo + ", Instrument: " + data;
+            var clip = m_clipStore.GetClip(clipId);
+            clip.Data = clip.Data + ", Recording data: " + data;
         }
 
         public string GetTrackData(string id)

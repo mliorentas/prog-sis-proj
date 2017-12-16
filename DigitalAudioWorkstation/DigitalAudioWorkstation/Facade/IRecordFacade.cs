@@ -9,7 +9,10 @@ namespace DigitalAudioWorkstation.Facade
 {
     interface IRecordFacade
     {
-        IClip RecordClip(string id, string trackId, string inputId, string instrumentId);
-        ITrack RecordTrack(string id, string inputId, string instrumentId);
+        IInput CreateInput(string id);
+        ITrack CreateTrack(string id);
+        IInstrument CreateInstrument(string id);
+
+        IClip RecordClip(string clipId, string trackId, string inputId, string instrumentId);
     }
 }

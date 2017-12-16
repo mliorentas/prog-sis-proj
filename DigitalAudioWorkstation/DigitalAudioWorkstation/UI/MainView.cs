@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace DigitalAudioWorkstation.UI.Views
 {
-    interface IMixerView
+    class MainView
     {
-        void ShowPlaybackResult();
-        void ShowApplyEffectResult();
+        void ShowMenu()
+        {
+
+        }
     }
 }

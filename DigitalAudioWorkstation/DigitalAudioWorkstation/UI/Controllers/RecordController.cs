@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DigitalAudioWorkstation.UI.Controllers
 {
-    interface IRecordController
+    class RecordController
     {
     }
 }

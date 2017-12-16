@@ -105,20 +105,15 @@
     <Compile Include="Repository\IOutputStore.cs" />
     <Compile Include="Repository\IInputStore.cs" />
     <Compile Include="Repository\IClipStore.cs" />
-    <Compile Include="UI\Controllers\IMixerController.cs" />
-    <Compile Include="UI\Controllers\IRecordController.cs" />
-    <Compile Include="UI\Views\IMainView.cs" />
-    <Compile Include="UI\Views\IMixerView.cs" />
-    <Compile Include="UI\Views\IRecordView.cs" />
+    <Compile Include="UI\Controllers\MixerController.cs" />
+    <Compile Include="UI\Controllers\RecordController.cs" />
+    <Compile Include="UI\MainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Controllers\Default\" />
-    <Folder Include="UI\Views\Console\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

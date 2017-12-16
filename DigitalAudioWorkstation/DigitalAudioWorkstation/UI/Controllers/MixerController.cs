@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalAudioWorkstation.UI.Views
+namespace DigitalAudioWorkstation.UI.Controllers
 {
-    interface IMainView
+    class MixerController
     {
-        void ShowMenu();
     }
 }

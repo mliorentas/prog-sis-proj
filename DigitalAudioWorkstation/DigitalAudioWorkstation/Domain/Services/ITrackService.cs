@@ -15,7 +15,7 @@ namespace DigitalAudioWorkstation.Domain.Services
         ITrack GetTrack(string id);
         IClip GetClip(string id);
         void AddEffect(string trackId, string data);
-        void AddInstrument(string trackId, string data);
+        void AddRecording(string clipId, string data);
         string GetTrackData(string id);
     }
 }
