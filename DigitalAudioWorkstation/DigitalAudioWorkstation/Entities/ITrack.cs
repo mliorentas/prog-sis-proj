@@ -10,5 +10,6 @@ namespace DigitalAudioWorkstation.Entities
     {
         string Id { get; set; }
         List<IClip> Clips { get; set; }
+        string TrackInfo { get; set; }
     }
 }

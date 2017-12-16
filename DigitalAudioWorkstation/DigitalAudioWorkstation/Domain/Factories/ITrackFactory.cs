@@ -11,7 +11,7 @@ namespace DigitalAudioWorkstation.Domain.Factories
 {
     interface ITrackFactory
     {
-        ITrack CreateTrack();
-        IClip CreateClip();
+        ITrack CreateTrack(string Id);
+        IClip CreateClip(string Id);
     }
 }

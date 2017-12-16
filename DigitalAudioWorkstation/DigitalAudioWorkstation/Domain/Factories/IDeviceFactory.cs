@@ -8,7 +8,7 @@ namespace DigitalAudioWorkstation.Domain.Factories
 {
     interface IDeviceFactory
     {
-        IInput CreateInput();
-        IOutput CreateOutput();
+        IInput CreateInput(string Id);
+        IOutput CreateOutput(string Id);
     }
 }

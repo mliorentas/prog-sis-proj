@@ -9,5 +9,6 @@ namespace DigitalAudioWorkstation.Entities.Audio
     class Sampler : IInstrument
     {
         public string Id { get; set; }
+        public string InstrumentInfo { get; set; }
     }
 }

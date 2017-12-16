@@ -9,19 +9,15 @@ namespace DigitalAudioWorkstation.Domain.Factories.Audio
 {
     class AudioDeviceFactory : IDeviceFactory
     {
-        public IInput CreateInput()
+        public IInput CreateInput(string Id)
         {
-            return new Microphone();
+            return new Microphone() { Id = Id , InputType = "Microphone, Condensator, Normalized "};
+
         }
 
-        public IOutput CreateOutput()
+        public IOutput CreateOutput(string Id)
         {
-            return new Speakers();
-        }
-
-        public void Method()
-        {
-            throw new System.NotImplementedException();
+            return new Speakers() { Id = Id, OutputType = "Speakers, Stereo " };
         }
     }
 }

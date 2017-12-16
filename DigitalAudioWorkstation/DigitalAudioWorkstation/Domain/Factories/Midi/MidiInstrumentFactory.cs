@@ -10,13 +10,14 @@ namespace DigitalAudioWorkstation.Domain.Factories.Midi
 {
     class MidiInstrumentFactory : IEffectFactory
     {
-        public IEffect CreateEffect()
+        public IEffect CreateEffect(string Id)
         {
-            return new Reverb();
+            return new Reverb() { Id = Id, Effect = "Reverb, Large chamber preset" };
         }
-        public IInstrument CreateInstrument()
+
+        public IInstrument CreateInstrument(string Id)
         {
-            return new Drums();
+            return new Drums() { Id = Id, InstrumentInfo = "Sampled Drum set " };
         }
     }
 }

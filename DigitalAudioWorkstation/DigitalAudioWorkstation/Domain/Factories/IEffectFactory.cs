@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Domain.Factories
 {
     interface IEffectFactory
     {
-        IEffect CreateEffect();
-        IInstrument CreateInstrument();
+        IEffect CreateEffect(string Id);
+        IInstrument CreateInstrument(string Id);
     }
 }

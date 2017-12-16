@@ -9,8 +9,7 @@ namespace DigitalAudioWorkstation.Entities.Midi
     class MidiTrack : ITrack
     {
         public string Id { get; set; }
-        public bool IsMuted { get; set; }
-        public float Pan { get; set; }
-        public float Volume { get; set; }
+        public List<IClip> Clips { get; set; }
+        public string TrackInfo { get; set; }
     }
 }

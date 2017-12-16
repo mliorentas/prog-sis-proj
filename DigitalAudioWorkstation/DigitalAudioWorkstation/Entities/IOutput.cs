@@ -9,5 +9,7 @@ namespace DigitalAudioWorkstation.Entities
     interface IOutput
     {
         string Id { get; set; }
+        string OutputType { get; set; }
+
     }
 }

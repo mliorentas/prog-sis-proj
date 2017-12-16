@@ -10,13 +10,15 @@ namespace DigitalAudioWorkstation.Domain.Factories.Audio
 {
     class AudioEffectsFactory : IEffectFactory
     {
-        public IEffect CreateEffect()
+
+        public IEffect CreateEffect(string Id)
         {
-            return new EQ();
+            return new EQ() { Id = Id , Effect = "EQ, Mid Highs, Loud Lows "};
         }
-        public IInstrument CreateInstrument()
+
+        public IInstrument CreateInstrument(string Id)
         {
-            return new Sampler();
+            return new Sampler() { Id = Id, InstrumentInfo = "Sampler" };
         }
     }
 }

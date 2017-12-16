@@ -9,5 +9,6 @@ namespace DigitalAudioWorkstation.Entities.Midi
     class Keyboard : IInput
     {
         public string Id { get; set; }
+        public string InputType { get; set; }
     }
 }

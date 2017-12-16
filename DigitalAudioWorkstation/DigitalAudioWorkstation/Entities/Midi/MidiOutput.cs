@@ -9,6 +9,6 @@ namespace DigitalAudioWorkstation.Entities.Midi
     class MidiOutput : IOutput
     {
         public string Id { get; set; }
-
+        public string OutputType { get; set; }
     }
 }

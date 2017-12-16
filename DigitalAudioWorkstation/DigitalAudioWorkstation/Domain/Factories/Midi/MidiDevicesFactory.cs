@@ -9,13 +9,15 @@ namespace DigitalAudioWorkstation.Domain.Factories.Midi
 {
     class MidiDeviceFactory : IDeviceFactory
     {
-        public IInput CreateInput()
+        public IInput CreateInput(string Id)
         {
-            return new Keyboard();
+            return new Keyboard() { Id = Id, InputType = "E-Piano Keyboard, Yamaha E-4562" };
+
         }
-        public IOutput CreateOutput()
+
+        public IOutput CreateOutput(string Id)
         {
-            return new MidiOutput();
+            return new MidiOutput() { Id = Id, OutputType = "Midi Output, Virtual Midi Track " };
         }
     }
 }

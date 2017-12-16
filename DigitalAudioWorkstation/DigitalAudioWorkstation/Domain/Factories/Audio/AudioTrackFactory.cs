@@ -11,13 +11,14 @@ namespace DigitalAudioWorkstation.Domain.Factories.Audio
 {
     class AudioTrackFactory : ITrackFactory
     {
-        public ITrack CreateTrack()
+        public ITrack CreateTrack(string Id)
         {
-            return new AudioTrack();
+            return new AudioTrack() { Id = Id, TrackInfo = "Audio Track, WAV format" };
         }
-        public IClip CreateClip()
+
+        public IClip CreateClip(string Id)
         {
-            return new AudioClip();
+            return new AudioClip() { Id = Id , Data = "Audio Clip recorded at " + System.DateTime.Now.ToString()};
         }
     }
 }
