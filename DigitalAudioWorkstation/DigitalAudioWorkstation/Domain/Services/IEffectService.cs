@@ -13,6 +13,7 @@ namespace DigitalAudioWorkstation.Domain.Services
         IEffect CreateEffect(string id);
         IInstrument GetInstrument(string id);
         IEffect GetEffect(string id);
-
+        string GetInstrumentData(string id);
+        string GetEffectData(string id);
     }
 }

@@ -12,52 +12,59 @@ namespace DigitalAudioWorkstation.Domain.Services.AudioServices
     class AudioTrackService : ITrackService
     {
         ITrackFactory m_factory;
-        ITrackStore m_store;
+        ITrackStore m_trackStore;
+        IClipStore m_clipStore;
 
-        public AudioTrackService(ITrackFactory factory, ITrackStore store)
+        public AudioTrackService(ITrackFactory factory, ITrackStore trackStore, IClipStore clipStore)
         {
             m_factory = factory;
-            m_store = store;
-        }
-
-        public ITrack AddClip(ITrack track, IClip clip)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IClip CreateClip()
-        {
-            return m_factory.CreateClip();
+            m_trackStore = trackStore;
+            m_clipStore = clipStore;
         }
 
         public IClip CreateClip(string id)
         {
-            throw new NotImplementedException();
-        }
-
-        public ITrack CreateTrack()
-        {
-            return m_factory.CreateTrack();
+            var clip = m_factory.CreateClip(id);
+            return m_clipStore.AddOrReplaceClip(clip);
         }
 
         public ITrack CreateTrack(string id)
         {
-            throw new NotImplementedException();
+            var track = m_factory.CreateTrack(id);
+            return m_trackStore.AddOrReplaceTrack(track);
         }
 
-        public IClip GetClip(string id, ITrack track)
+        public IClip GetClip(string id)
         {
-            throw new NotImplementedException();
+            return m_clipStore.GetClip(id);
         }
 
         public ITrack GetTrack(string id)
         {
-            throw new NotImplementedException();
+            return m_trackStore.GetTrack(id);
         }
 
-        public ITrack InsertClip(ITrack track, double time)
+        public void AddClip(ITrack track, IClip clip)
         {
-            throw new NotImplementedException();
+            track.Clips.Add(clip);
+        }
+
+        public void AddEffect(string trackId, string data)
+        {
+            var track = m_trackStore.GetTrack(trackId);
+            track.TrackInfo = track.TrackInfo + "Effect: " + data;
+        }
+
+        public void AddInstrument(string trackId, string data)
+        {
+            var track = m_trackStore.GetTrack(trackId);
+            track.TrackInfo = track.TrackInfo + ", Instrument: " + data;
+        }
+
+        public string GetTrackData(string id)
+        {
+            var track = m_trackStore.GetTrack(id);
+            return track.TrackInfo;
         }
     }
 }

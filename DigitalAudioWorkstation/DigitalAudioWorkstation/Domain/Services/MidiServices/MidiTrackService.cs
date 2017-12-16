@@ -5,61 +5,66 @@ using System.Text;
 using System.Threading.Tasks;
 using DigitalAudioWorkstation.Entities;
 using DigitalAudioWorkstation.Domain.Factories;
+using DigitalAudioWorkstation.Repository;
 
 namespace DigitalAudioWorkstation.Domain.Services.MidiServices
 {
     class MidiTrackService : ITrackService
     {
         ITrackFactory m_factory;
+        ITrackStore m_trackStore;
+        IClipStore m_clipStore;
 
-        public MidiTrackService(ITrackFactory factory)
+        public MidiTrackService(ITrackFactory factory, ITrackStore trackStore, IClipStore clipStore)
         {
             m_factory = factory;
-        }
-
-        public ITrack AddClip(ITrack track, IClip clip)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IClip CreateClip()
-        {
-            throw new NotImplementedException();
+            m_trackStore = trackStore;
+            m_clipStore = clipStore;
         }
 
         public IClip CreateClip(string id)
         {
-            throw new NotImplementedException();
-        }
-
-        public ITrack CreateTrack()
-        {
-            throw new NotImplementedException();
+            var clip = m_factory.CreateClip(id);
+            return m_clipStore.AddOrReplaceClip(clip);
         }
 
         public ITrack CreateTrack(string id)
         {
-            throw new NotImplementedException();
+            var track = m_factory.CreateTrack(id);
+            return m_trackStore.AddOrReplaceTrack(track);
         }
 
-        public IClip GetClip(string id, ITrack track)
+        public IClip GetClip(string id)
         {
-            throw new NotImplementedException();
+            return m_clipStore.GetClip(id);
         }
 
         public ITrack GetTrack(string id)
         {
-            throw new NotImplementedException();
+            return m_trackStore.GetTrack(id);
         }
 
-        public ITrack InsertClip(ITrack track, double time)
+        public void AddClip(ITrack track, IClip clip)
         {
-            throw new NotImplementedException();
+            track.Clips.Add(clip);
         }
 
-        public ITrack SetMute(ITrack track, bool muted)
+        public void AddEffect(string trackId, string data)
         {
-            throw new NotImplementedException();
+            var track = m_trackStore.GetTrack(trackId);
+            track.TrackInfo = track.TrackInfo + "Effect: " + data;
+        }
+
+        public void AddInstrument(string trackId, string data)
+        {
+            var track = m_trackStore.GetTrack(trackId);
+            track.TrackInfo = track.TrackInfo + ", Instrument: " + data;
+        }
+
+        public string GetTrackData(string id)
+        {
+            var track = m_trackStore.GetTrack(id);
+            return track.TrackInfo;
         }
     }
 }

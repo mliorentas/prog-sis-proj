@@ -11,8 +11,11 @@ namespace DigitalAudioWorkstation.Domain.Services
     {
         ITrack CreateTrack(string id);
         IClip CreateClip(string id);
-        ITrack AddClip(ITrack track, IClip clip);
+        void AddClip(ITrack track, IClip clip);
         ITrack GetTrack(string id);
-        IClip GetClip(string id, ITrack track);
+        IClip GetClip(string id);
+        void AddEffect(string trackId, string data);
+        void AddInstrument(string trackId, string data);
+        string GetTrackData(string id);
     }
 }

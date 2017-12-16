@@ -13,5 +13,7 @@ namespace DigitalAudioWorkstation.Domain.Services
         IOutput CreateOutput(string id);
         IInput GetInput(string id);
         IOutput GetOutput(string id);
+        string RecordClipData(string id);
+        string PlayTrack(IOutput output, string data);
     }
 }
