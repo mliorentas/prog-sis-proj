@@ -4,7 +4,10 @@ using DigitalAudioWorkstation.Domain.Factories.Midi;
 using DigitalAudioWorkstation.Domain.Services;
 using DigitalAudioWorkstation.Domain.Services.AudioServices;
 using DigitalAudioWorkstation.Domain.Services.MidiServices;
+using DigitalAudioWorkstation.Facade;
 using DigitalAudioWorkstation.Repository;
+using DigitalAudioWorkstation.UI.Controllers;
+using DigitalAudioWorkstation.UI.View;
 
 namespace DigitalAudioWorkstation
 {
@@ -29,20 +32,31 @@ namespace DigitalAudioWorkstation
             builder.RegisterType<InMemoryOutputStore>().As<IOutputStore>();
             builder.RegisterType<InMemoryTrackStore>().As<ITrackStore>();
 
-            builder.RegisterType<AudioDeviceService>().As<IDeviceService>();
-            builder.RegisterType<AudioEffectService>().As<IEffectService>();
-            builder.RegisterType<AudioTrackService>().As<ITrackService>();
+            //builder.RegisterType<AudioDeviceService>().As<IDeviceService>();
+            //builder.RegisterType<AudioEffectService>().As<IEffectService>();
+            //builder.RegisterType<AudioTrackService>().As<ITrackService>();
 
             //Different realizations for different classes
-            builder.Register(ctx => new AudioTrackService(new AudioTrackFactory(), ctx.Resolve< ITrackStore>(), ctx.Resolve<IClipStore>()));
-            builder.Register(ctx => new AudioEffectService(new AudioEffectsFactory(), ctx.Resolve<IEffectStore>(), ctx.Resolve<IInstrumentStore>()));
-            builder.Register(ctx => new AudioDeviceService(new AudioDeviceFactory(), ctx.Resolve<IInputStore>(), ctx.Resolve<IOutputStore>()));
+            builder.Register(ctx => new AudioTrackService(new AudioTrackFactory(), ctx.Resolve< ITrackStore>(), ctx.Resolve<IClipStore>())).As<ITrackService>();
+            builder.Register(ctx => new AudioEffectService(new AudioEffectsFactory(), ctx.Resolve<IEffectStore>(), ctx.Resolve<IInstrumentStore>())).As<IEffectService>(); ;
+            builder.Register(ctx => new AudioDeviceService(new AudioDeviceFactory(), ctx.Resolve<IInputStore>(), ctx.Resolve<IOutputStore>())).As<IDeviceService>();
 
-            builder.Register(ctx => new MidiTrackService(new MidiTrackFactory(), ctx.Resolve<ITrackStore>(), ctx.Resolve<IClipStore>()));
-            builder.Register(ctx => new MidiEffectService(new MidiInstrumentFactory(), ctx.Resolve<IEffectStore>(), ctx.Resolve<IInstrumentStore>()));
-            builder.Register(ctx => new MidiDeviceService(new MidiDeviceFactory(), ctx.Resolve<IInputStore>(), ctx.Resolve<IOutputStore>()));
+            //builder.Register(ctx => new MidiTrackService(new MidiTrackFactory(), ctx.Resolve<ITrackStore>(), ctx.Resolve<IClipStore>()));
+            //builder.Register(ctx => new MidiEffectService(new MidiInstrumentFactory(), ctx.Resolve<IEffectStore>(), ctx.Resolve<IInstrumentStore>()));
+            //builder.Register(ctx => new MidiDeviceService(new MidiDeviceFactory(), ctx.Resolve<IInputStore>(), ctx.Resolve<IOutputStore>()));
 
-            Container = builder.Build(); 
+            builder.RegisterType<AudioRecordFacade>().As<IRecordFacade>();
+            builder.RegisterType<AudioMixerFacade>().As<IMixerFacade>();
+
+            builder.RegisterType<MixerController>();
+            builder.RegisterType<RecordController>();
+
+            builder.Register(ctx => new MainView(ctx.Resolve<MixerController>(), ctx.Resolve<RecordController>()));
+
+            Container = builder.Build();
+
+            var view = Container.Resolve<MainView>();
+            view.Main();
         }
     }
 }

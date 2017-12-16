@@ -17,16 +17,16 @@ namespace DigitalAudioWorkstation.UI.Controllers
             m_mixerFacade = mixer;
         }
 
-        IOutput CreateOutput(string id)
+        public IOutput CreateOutput(string id)
         {
             return m_mixerFacade.CreateOutput(id);
         }
-        IEffect CreateEffect(string id)
+        public IEffect CreateEffect(string id)
         {
             return m_mixerFacade.CreateEffect(id);
         }
 
-        string PlayTrack(string trackId, string outputId, string effectId)
+        public string PlayTrack(string trackId, string outputId, string effectId)
         {
             return m_mixerFacade.PlayTrack(trackId, outputId, effectId);
         }

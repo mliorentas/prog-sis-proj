@@ -52,18 +52,27 @@ namespace DigitalAudioWorkstation.Domain.Services.AudioServices
         public void AddEffect(string trackId, string data)
         {
             var track = m_trackStore.GetTrack(trackId);
+            if (null == track)
+                return;
+
             track.TrackInfo = track.TrackInfo + "Effect: " + data;
         }
 
         public void AddRecording(string clipId, string data)
         {
             var clip = m_clipStore.GetClip(clipId);
+            if (null == clip)
+                return;
+
             clip.Data = clip.Data + ", Recording data: " + data;
         }
 
         public string GetTrackData(string id)
         {
             var track = m_trackStore.GetTrack(id);
+            if (null == track)
+                return String.Empty;
+
             return track.TrackInfo;
         }
     }

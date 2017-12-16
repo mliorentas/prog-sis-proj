@@ -17,22 +17,22 @@ namespace DigitalAudioWorkstation.UI.Controllers
             m_recordFacade = recordFacade;
         }
 
-        IInput CreateInput(string id)
+        public IInput CreateInput(string id)
         {
             return m_recordFacade.CreateInput(id);
         }
 
-        ITrack CreateTrack(string id)
+        public ITrack CreateTrack(string id)
         {
             return m_recordFacade.CreateTrack(id);
         }
 
-        IInstrument CreateInstrument(string id)
+        public IInstrument CreateInstrument(string id)
         {
             return m_recordFacade.CreateInstrument(id);
         }
 
-        IClip RecordClip(string clipId, string trackId, string inputId, string instrumentId)
+        public IClip RecordClip(string clipId, string trackId, string inputId, string instrumentId)
         {
             return m_recordFacade.RecordClip(clipId, trackId, inputId, instrumentId);
         }
