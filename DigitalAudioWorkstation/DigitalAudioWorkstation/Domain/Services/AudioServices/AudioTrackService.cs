@@ -20,14 +20,39 @@ namespace DigitalAudioWorkstation.Domain.Services.AudioServices
             m_store = store;
         }
 
+        public ITrack AddClip(ITrack track, IClip clip)
+        {
+            throw new NotImplementedException();
+        }
+
         public IClip CreateClip()
         {
             return m_factory.CreateClip();
         }
 
+        public IClip CreateClip(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public ITrack CreateTrack()
         {
             return m_factory.CreateTrack();
+        }
+
+        public ITrack CreateTrack(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IClip GetClip(string id, ITrack track)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ITrack GetTrack(string id)
+        {
+            throw new NotImplementedException();
         }
 
         public ITrack InsertClip(ITrack track, double time)

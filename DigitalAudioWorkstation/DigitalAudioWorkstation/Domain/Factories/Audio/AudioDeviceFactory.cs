@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DigitalAudioWorkstation.Entities;
 using DigitalAudioWorkstation.Entities.Audio;
 
 namespace DigitalAudioWorkstation.Domain.Factories.Audio
@@ -18,6 +17,11 @@ namespace DigitalAudioWorkstation.Domain.Factories.Audio
         public IOutput CreateOutput()
         {
             return new Speakers();
+        }
+
+        public void Method()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

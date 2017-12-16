@@ -10,8 +10,15 @@ namespace DigitalAudioWorkstation.Repository
     class InMemoryInputStore : IInputStore
     {
         private List<IInput> m_inputs = new List<IInput>();
-        public IInput AddInput(IInput input)
+
+        public IInput AddOrReplaceInput(IInput input)
         {
+            var existing = GetInput(input.Id);
+            if (null == existing)
+            {
+                m_inputs.Remove(existing);
+            }
+
             m_inputs.Add(input);
             return input;
         }

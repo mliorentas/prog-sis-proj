@@ -34,7 +34,7 @@ namespace DigitalAudioWorkstation
             builder.RegisterType<AudioTrackService>().As<ITrackService>();
 
             //Different realizations for different classes
-            builder.Register(ctx => new AudioTrackService(new AudioTrackFactory()));
+            builder.Register(ctx => new AudioTrackService(new AudioTrackFactory(), ctx.Resolve< ITrackStore>()));
             builder.Register(ctx => new AudioEffectService(new AudioEffectsFactory()));
             builder.Register(ctx => new AudioDeviceService(new AudioDeviceFactory()));
 

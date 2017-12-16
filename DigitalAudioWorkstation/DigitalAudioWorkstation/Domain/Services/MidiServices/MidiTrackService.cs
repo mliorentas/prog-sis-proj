@@ -17,12 +17,37 @@ namespace DigitalAudioWorkstation.Domain.Services.MidiServices
             m_factory = factory;
         }
 
+        public ITrack AddClip(ITrack track, IClip clip)
+        {
+            throw new NotImplementedException();
+        }
+
         public IClip CreateClip()
         {
             throw new NotImplementedException();
         }
 
+        public IClip CreateClip(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public ITrack CreateTrack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ITrack CreateTrack(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IClip GetClip(string id, ITrack track)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ITrack GetTrack(string id)
         {
             throw new NotImplementedException();
         }

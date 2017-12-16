@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Repository
 {
     interface IClipStore
     {
-        IClip AddClip(IClip clip);
+        IClip AddOrReplaceClip(IClip clip);
         IClip GetClip(string id);
     }
 }

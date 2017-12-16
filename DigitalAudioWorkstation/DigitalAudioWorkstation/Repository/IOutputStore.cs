@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Repository
 {
     interface IOutputStore
     {
-        IOutput AddOutput(IOutput output);
+        IOutput AddOrReplaceOutput(IOutput output);
         IOutput GetOutput(string id);
     }
 }

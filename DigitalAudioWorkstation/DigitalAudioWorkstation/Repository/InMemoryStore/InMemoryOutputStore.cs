@@ -11,8 +11,14 @@ namespace DigitalAudioWorkstation.Repository
     {
         private List<IOutput> m_outputs = new List<IOutput>();
 
-        public IOutput AddOutput(IOutput output)
+        public IOutput AddOrReplaceOutput(IOutput output)
         {
+            var existing = GetOutput(output.Id);
+            if (null == existing)
+            {
+                m_outputs.Remove(existing);
+            }
+
             m_outputs.Add(output);
             return output;
         }

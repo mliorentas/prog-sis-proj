@@ -9,5 +9,6 @@ namespace DigitalAudioWorkstation.Entities.Audio
     class EQ : IEffect
     {
         public string Id { get; set; }
+        public string Effect { get; set; }
     }
 }

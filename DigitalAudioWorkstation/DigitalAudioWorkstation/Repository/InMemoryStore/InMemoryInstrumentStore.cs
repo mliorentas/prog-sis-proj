@@ -11,8 +11,14 @@ namespace DigitalAudioWorkstation.Repository
     {
         private List<IInstrument> m_instruments = new List<IInstrument>();
 
-        public IInstrument AddInstrument(IInstrument instrument)
+        public IInstrument AddOrReplaceInstrument(IInstrument instrument)
         {
+            var existing = GetInstrument(instrument.Id);
+            if (null == existing)
+            {
+                m_instruments.Remove(existing);
+            }
+
             m_instruments.Add(instrument);
             return instrument;
         }

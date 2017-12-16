@@ -11,8 +11,14 @@ namespace DigitalAudioWorkstation.Repository
     {
         private List<IClip> m_clips = new List<IClip>();
 
-        public IClip AddClip(IClip clip)
+        public IClip AddOrReplaceClip(IClip clip)
         {
+            var existing = GetClip(clip.Id);
+            if (null == existing)
+            {
+                m_clips.Remove(existing);
+            }
+
             m_clips.Add(clip);
             return clip;
         }

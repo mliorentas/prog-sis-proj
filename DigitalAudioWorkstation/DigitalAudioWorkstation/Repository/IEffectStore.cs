@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Repository
 {
     interface IEffectStore
     {
-        IEffect AddEffect(IEffect effect);
+        IEffect AddOrReplaceEffect(IEffect effect);
         IEffect GetEffect(string id);
     }
 }

@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Repository
 {
     interface IInputStore
     {
-        IInput AddInput(IInput input);
+        IInput AddOrReplaceInput(IInput input);
         IInput GetInput(string id);
     }
 }

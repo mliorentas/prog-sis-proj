@@ -9,8 +9,6 @@ namespace DigitalAudioWorkstation.Entities
     interface ITrack
     {
         string Id { get; set; }
-        bool IsMuted { get; set; }
-        float Pan { get; set; }
-        float Volume { get; set; }
+        List<IClip> Clips { get; set; }
     }
 }

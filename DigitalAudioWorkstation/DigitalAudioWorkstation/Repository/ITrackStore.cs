@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Repository
 {
     interface ITrackStore
     {
-        ITrack AddTrack(ITrack track);
+        ITrack AddOrReplaceTrack(ITrack track);
         ITrack GetTrack(string id);
     }
 }

@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace DigitalAudioWorkstation.Repository
 {
-    class InMemoryEffectStore
+    class InMemoryEffectStore : IEffectStore
     {
         private List<IEffect> m_effects = new List<IEffect>();
 
-        IEffect AddEffect(IEffect effect)
+        public IEffect AddOrReplaceEffect(IEffect effect)
         {
+            var existing = GetEffect(effect.Id);
+            if (null == existing)
+            {
+                m_effects.Remove(existing);
+            }
             m_effects.Add(effect);
             return effect;
         }
-        IEffect GetEffect(string id)
+        public IEffect GetEffect(string id)
         {
             return m_effects.FirstOrDefault(effect => effect.Id == id);
         }

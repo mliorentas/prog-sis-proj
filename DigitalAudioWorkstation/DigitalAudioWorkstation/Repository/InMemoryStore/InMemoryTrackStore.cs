@@ -11,8 +11,14 @@ namespace DigitalAudioWorkstation.Repository
     {
         private List<ITrack> m_tracks = new List<ITrack>();
 
-        public ITrack AddTrack(ITrack track)
+        public ITrack AddOrReplaceTrack(ITrack track)
         {
+            var existing = GetTrack(track.Id);
+            if (null == existing)
+            {
+                m_tracks.Remove(existing);
+            }
+
             m_tracks.Add(track);
             return track;
         }
