@@ -9,7 +9,9 @@ namespace DigitalAudioWorkstation.Facade
 {
     interface IMixerFacade
     {
-        ITrack PlayTrack(ITrack track, IOutput output, IEffect effect);
-        IClip ApllyEffect(IClip clip, IEffect effect);
+        IOutput CreateOutput(string id);
+        IEffect CreateEffect(string id);
+
+        string PlayTrack(string trackId, string outputId, string effectId);
     }
 }

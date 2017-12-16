@@ -107,7 +107,7 @@
     <Compile Include="Repository\IClipStore.cs" />
     <Compile Include="UI\Controllers\MixerController.cs" />
     <Compile Include="UI\Controllers\RecordController.cs" />
-    <Compile Include="UI\MainView.cs" />
+    <Compile Include="UI\View\MainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
