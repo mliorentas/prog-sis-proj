@@ -4,24 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
-    class EventExtension
+    abstract class EventExtension
     {
-        protected Event _owner;
+        protected CalendarEvent _owner;
         public virtual string Info { get; set; }
+
+        public abstract string GetExtension();
 
         public EventExtension()
         {
         }
 
-        public static EventExtension Create<T>(Event owner) where T : EventExtension, new()
+        public static EventExtension Create<T>(CalendarEvent owner) where T : EventExtension, new()
         {
             var result = new T
             {
                 _owner = owner
             };
             return result;
+        }
+
+        public void RemoveExtension()
+        {
+            _owner = null;
         }
     }
 }

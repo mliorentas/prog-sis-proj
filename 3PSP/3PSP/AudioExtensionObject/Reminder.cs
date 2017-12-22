@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
-    class Reminder : Event
+    class Reminder : CalendarEvent
     {
         public Reminder()
         {
@@ -15,7 +15,7 @@ namespace AudioDecorator
 
         public override string GetItem()
         {
-            return String.Format("Title - {0}\nDescription - {1}", Title, Description);
+            return String.Format("Title - {0}\nDescription - {1}\n", Title, Description) + GetExtensions();
         }
     }
 }

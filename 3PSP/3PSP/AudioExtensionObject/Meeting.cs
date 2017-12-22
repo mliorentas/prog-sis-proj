@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
-    class Meeting : Event
+    class Meeting : CalendarEvent
     {
         public string People { get; set; }
         public Meeting()
@@ -15,7 +15,7 @@ namespace AudioDecorator
         }
         public override string GetItem()
         {
-            return String.Format("Title - {0}\nPeople - {2}\nDescription - {1}", Title, Description, People);
+            return String.Format("Title - {0}\nPeople - {2}\nDescription - {1}\n", Title, Description, People) + GetExtensions();
         }
     }
 }

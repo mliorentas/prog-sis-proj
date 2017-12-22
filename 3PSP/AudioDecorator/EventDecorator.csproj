@@ -46,7 +46,7 @@
     <Compile Include="Decorators\ItemTag.cs" />
     <Compile Include="Decorators\ItemTime.cs" />
     <Compile Include="Decorators\EventDecorator.cs" />
-    <Compile Include="Event.cs" />
+    <Compile Include="CalendarEvent.cs" />
     <Compile Include="Reminder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

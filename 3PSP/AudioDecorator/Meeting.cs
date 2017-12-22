@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
-    class Meeting : Event
+    class Meeting : CalendarEvent
     {
         public string People { get; set; }
         public Meeting()

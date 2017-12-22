@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
-    class EventDecorator : Event
+    class EventDecorator : CalendarEvent
     {
-        protected Event _item;
+        protected CalendarEvent _item;
 
-        public EventDecorator(Event item)
+        public EventDecorator(CalendarEvent item)
         {
             _item = item;
         }
 
-        public static Event RemoveRole<T>(Event item) where T : EventDecorator
+        public static CalendarEvent RemoveRole<T>(CalendarEvent item) where T : EventDecorator
         {
             if (item == null)
                 return null;
@@ -33,7 +33,7 @@ namespace AudioDecorator
             return role;
         }
 
-        public static T GetRole<T>(Event item) where T : EventDecorator
+        public static T GetRole<T>(CalendarEvent item) where T : EventDecorator
         {
             if (item == null)
                 return null;
@@ -52,7 +52,7 @@ namespace AudioDecorator
             return null;
         }
 
-        protected Event GetEvent()
+        protected CalendarEvent GetEvent()
         {
             var role = _item as EventDecorator;
             if (role == null)

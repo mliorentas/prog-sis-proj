@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\EventDecorator.cs" />
+    <Compile Include="Extensions\EventExtension.cs" />
     <Compile Include="Extensions\ItemPlace.cs" />
     <Compile Include="Extensions\ItemTag.cs" />
     <Compile Include="Extensions\ItemTime.cs" />
-    <Compile Include="Event.cs" />
+    <Compile Include="CalendarEvent.cs" />
     <Compile Include="Meeting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

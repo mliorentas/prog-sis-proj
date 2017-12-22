@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
     class ItemTag : EventDecorator
     {
         HashSet<string> _tags = new HashSet<string>();
 
-        public ItemTag(Event item) : base(item)
+        public ItemTag(CalendarEvent item) : base(item)
         {
             Info = "Tags";
         }

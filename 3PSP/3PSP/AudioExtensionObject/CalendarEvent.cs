@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
-    abstract class Event
+    abstract class CalendarEvent
     {
         public virtual string Title { get; set; }
         public virtual string Description { get; set; }
@@ -28,6 +28,10 @@ namespace AudioDecorator
 
         public int RemoveExtension<T>() where T : EventExtension
         {
+            foreach (var extension in _extensions.Where(item => item is T))
+            {
+                extension.RemoveExtension();
+            }
             return _extensions.RemoveAll(item => item is T );
         }
 
@@ -42,5 +46,12 @@ namespace AudioDecorator
             }
             return null;
         }
+
+        public string GetExtensions()
+        {
+            return String.Join("\n", _extensions.Select(ex => ex.GetExtension()));
+        }
+
+
     }
 }

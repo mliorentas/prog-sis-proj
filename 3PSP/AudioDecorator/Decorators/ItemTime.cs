@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
     class ItemDate : EventDecorator
     {
         public DateTime Date { get; set; }
 
-        public ItemDate(Event item) : base(item)
+        public ItemDate(CalendarEvent item) : base(item)
         {
             Info = "Date";
         }

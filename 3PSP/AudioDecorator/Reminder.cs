@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
-    class Reminder : Event
+    class Reminder : CalendarEvent
     {
         public Reminder()
         {

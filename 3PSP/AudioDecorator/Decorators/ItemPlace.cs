@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
     class ItemPlace : EventDecorator
     {
         public string Place { get; set; }
 
-        public ItemPlace(Event item) : base (item)
+        public ItemPlace(CalendarEvent item) : base (item)
         {
             Info = "Place";
         }

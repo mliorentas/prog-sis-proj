@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
     class ItemDate : EventExtension
     {
@@ -14,6 +14,12 @@ namespace AudioDecorator
         public string GetTime()
         {
             return String.Format("Time: {0}", Date);
+        }
+
+
+        public override string GetExtension()
+        {
+            return GetTime();
         }
 
         public int CalculateDaysUntilEvent()

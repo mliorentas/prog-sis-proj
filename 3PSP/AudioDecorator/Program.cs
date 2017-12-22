@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AudioDecorator
+namespace DecoratorPSP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Event reminder = new Reminder() { Title = "Need food", Description = "Eggs, bacon, eggplant." };
+            CalendarEvent reminder = new Reminder() { Title = "Need food", Description = "Eggs, bacon, eggplant." };
             reminder = new ItemDate(reminder) {Date = new DateTime(2017, 12, 29)};
             reminder = new ItemPlace(reminder) { Place = "My room"};
             reminder = new ItemTag(reminder);
