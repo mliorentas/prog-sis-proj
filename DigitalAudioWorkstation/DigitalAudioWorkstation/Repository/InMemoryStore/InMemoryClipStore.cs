@@ -14,7 +14,7 @@ namespace DigitalAudioWorkstation.Repository
         public IClip AddOrReplaceClip(IClip clip)
         {
             var existing = GetClip(clip.Id);
-            if (null == existing)
+            if (null != existing)
             {
                 m_clips.Remove(existing);
             }

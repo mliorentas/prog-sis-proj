@@ -14,7 +14,7 @@ namespace DigitalAudioWorkstation.Repository
         public IEffect AddOrReplaceEffect(IEffect effect)
         {
             var existing = GetEffect(effect.Id);
-            if (null == existing)
+            if (null != existing)
             {
                 m_effects.Remove(existing);
             }

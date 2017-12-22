@@ -18,7 +18,7 @@ namespace DigitalAudioWorkstation.Domain.Factories.Midi
 
         public IClip CreateClip(string Id)
         {
-            return new MidiClip() { Id = Id, Data = "Midi Clip recorded at " + System.DateTime.Now.ToString() };
+            return new MidiClip() { Id = Id, Data = "Midi Clip" };
         }
     }
 }

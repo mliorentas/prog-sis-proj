@@ -17,7 +17,7 @@ namespace DigitalAudioWorkstation.Domain.Factories.Midi
 
         public IInstrument CreateInstrument(string Id)
         {
-            return new Drums() { Id = Id, InstrumentInfo = "Sampled Drum set " };
+            return new Drums() { Id = Id, InstrumentInfo = "Sampled Drum set" };
         }
     }
 }

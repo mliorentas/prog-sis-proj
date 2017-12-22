@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDecorator", "..\AudioDecorator\EventDecorator.csproj", "{906C84EB-785E-45F3-B438-FF5A9CC6E953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventExtensionObject", "AudioExtensionObject\EventExtensionObject.csproj", "{F57D0022-F4F3-4707-975B-12AEA25EC7FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{906C84EB-785E-45F3-B438-FF5A9CC6E953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906C84EB-785E-45F3-B438-FF5A9CC6E953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906C84EB-785E-45F3-B438-FF5A9CC6E953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906C84EB-785E-45F3-B438-FF5A9CC6E953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57D0022-F4F3-4707-975B-12AEA25EC7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57D0022-F4F3-4707-975B-12AEA25EC7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57D0022-F4F3-4707-975B-12AEA25EC7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57D0022-F4F3-4707-975B-12AEA25EC7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25A24EC5-80E3-4279-B201-939A84EAF5E1}
+	EndGlobalSection
+EndGlobal

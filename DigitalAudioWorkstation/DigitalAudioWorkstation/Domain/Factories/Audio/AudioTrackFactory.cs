@@ -18,7 +18,7 @@ namespace DigitalAudioWorkstation.Domain.Factories.Audio
 
         public IClip CreateClip(string Id)
         {
-            return new AudioClip() { Id = Id , Data = "Midi Clip"};
+            return new AudioClip() { Id = Id , Data = "Audio Clip"};
         }
     }
 }

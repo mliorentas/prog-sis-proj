@@ -51,7 +51,7 @@ namespace DigitalAudioWorkstation.Domain.Services.AudioServices
             if (null == input)
                 return string.Empty;
 
-            return String.Format("{0} recorded clip at {1}.", input.InputType, DateTime.Now.ToString());
+            return String.Format("{0} audio recorded clip at {1}.", input.InputType, DateTime.Now.ToString());
         }
     }
 }

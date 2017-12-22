@@ -60,14 +60,10 @@ namespace DigitalAudioWorkstation.UI.View
                     case 0:
                         return;
                     case 1:
-                        Console.WriteLine("Input input id.");
-                        var inputId = Console.ReadLine();
-                        ShowInput(m_recorder.CreateInput(inputId));
+                        CreateInput();
                         break;
                     case 2:
-                        Console.WriteLine("Input output id.");
-                        var outputId = Console.ReadLine();
-                        ShowOutput(m_mixer.CreateOutput(outputId));
+                        CreateOutput();
                         break;
                     case 3:
                         Console.WriteLine("Input effect id.");
@@ -111,9 +107,16 @@ namespace DigitalAudioWorkstation.UI.View
 
         }
 
+        private void CreateOutput()
+        {
+            Console.WriteLine("Input output id.");
+            var outputId = Console.ReadLine();
+            ShowOutput(m_mixer.CreateOutput(outputId));
+        }
+
         private void ShowSong(string song)
         {
-            Console.WriteLine("Played song - ", song);
+            Console.WriteLine("Played song - {0}", song);
         }
 
         private void ShowClip(IClip clip)
@@ -141,9 +144,17 @@ namespace DigitalAudioWorkstation.UI.View
             Console.WriteLine("Created output with id - {0}, type - {1}.", output.Id, output.OutputType);
         }
 
+        private void CreateInput()
+        {
+            Console.WriteLine("Input input id.");
+            var inputId = Console.ReadLine();
+            ShowInput(m_recorder.CreateInput(inputId));
+        }
+
         private void ShowInput(IInput input)
         {
             Console.WriteLine("Created input with id - {0}, type - {1}.", input.Id, input.InputType);
         }
+
     }
 }

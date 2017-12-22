@@ -14,7 +14,7 @@ namespace DigitalAudioWorkstation.Repository
         public IOutput AddOrReplaceOutput(IOutput output)
         {
             var existing = GetOutput(output.Id);
-            if (null == existing)
+            if (null != existing)
             {
                 m_outputs.Remove(existing);
             }

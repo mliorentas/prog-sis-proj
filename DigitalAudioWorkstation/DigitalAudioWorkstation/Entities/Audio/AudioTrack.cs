@@ -9,7 +9,7 @@ namespace DigitalAudioWorkstation.Entities.Audio
     class AudioTrack : ITrack
     {
         public string Id { get; set; }
-        public List<IClip> Clips { get; set; }
+        public List<IClip> Clips { get; set; } = new List<IClip>();
         public string TrackInfo { get; set; }
     }
 }

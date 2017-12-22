@@ -14,7 +14,7 @@ namespace DigitalAudioWorkstation.Repository
         public IInput AddOrReplaceInput(IInput input)
         {
             var existing = GetInput(input.Id);
-            if (null == existing)
+            if (null != existing)
             {
                 m_inputs.Remove(existing);
             }

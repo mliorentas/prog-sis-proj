@@ -38,8 +38,10 @@ namespace DigitalAudioWorkstation.Facade
 
         public IClip RecordClip(string clipId, string trackId, string inputId, string instrumentId)
         {
-            m_trackService.AddEffect(trackId, m_instrumentService.GetEffectData(instrumentId));
+            m_trackService.AddEffect(trackId, m_instrumentService.GetInstrumentData(instrumentId));
             var clip = m_trackService.CreateClip(clipId);
+            var track = m_trackService.GetTrack(trackId);
+            m_trackService.AddClip(track, clip);
             m_trackService.AddRecording(clipId, m_deviceService.RecordClipData(inputId));
             return clip;
         }

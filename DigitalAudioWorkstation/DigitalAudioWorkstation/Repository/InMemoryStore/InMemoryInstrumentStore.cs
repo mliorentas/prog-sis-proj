@@ -14,7 +14,7 @@ namespace DigitalAudioWorkstation.Repository
         public IInstrument AddOrReplaceInstrument(IInstrument instrument)
         {
             var existing = GetInstrument(instrument.Id);
-            if (null == existing)
+            if (null != existing)
             {
                 m_instruments.Remove(existing);
             }

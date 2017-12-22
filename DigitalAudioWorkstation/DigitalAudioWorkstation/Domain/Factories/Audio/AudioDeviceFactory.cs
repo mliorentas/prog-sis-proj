@@ -17,7 +17,7 @@ namespace DigitalAudioWorkstation.Domain.Factories.Audio
 
         public IOutput CreateOutput(string Id)
         {
-            return new Speakers() { Id = Id, OutputType = "Speakers, Stereo " };
+            return new Speakers() { Id = Id, OutputType = "Speakers, Stereo" };
         }
     }
 }

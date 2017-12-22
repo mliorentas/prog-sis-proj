@@ -14,7 +14,7 @@ namespace DigitalAudioWorkstation.Repository
         public ITrack AddOrReplaceTrack(ITrack track)
         {
             var existing = GetTrack(track.Id);
-            if (null == existing)
+            if (null != existing)
             {
                 m_tracks.Remove(existing);
             }

@@ -34,10 +34,19 @@ namespace DigitalAudioWorkstation.Facade
         {
             var track = m_trackService.GetTrack(trackId);
             if (null == track)
-                return String.Empty;
-
-            m_instrumentService.GetEffect(effectId);
-            return m_deviceService.PlayTrack(m_deviceService.GetOutput(outputId), track.TrackInfo + " " + m_instrumentService.GetEffect(effectId).Effect + " "  + track.Clips.Select(clip => clip.Data).ToString());
+                return "No track";
+            var output = m_deviceService.GetOutput(outputId);
+            if (null == output)
+                return "No output";
+            if (null == track.Clips)
+                return "No clips";
+            var clips = track.Clips.Select(clip => clip.Data);
+            if (null == clips)
+                return "No clips";
+            var effect = m_instrumentService.GetEffect(effectId);
+            if (null == effect)
+                return "No effect";
+            return m_deviceService.PlayTrack(output, track.TrackInfo + " " + effect.Effect + " \n"  + String.Join("\n", clips.ToList()));
         }
     }
 }
